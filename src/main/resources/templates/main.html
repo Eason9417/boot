@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zxx" class="js" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Softnio">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Fav Icon  -->
+    <link rel="shortcut icon" href="images/favicon.png">
+    <!-- Page Title  -->
+    <title>智能校园管理系统</title>
+    <!-- StyleSheets  -->
+    <link rel="stylesheet" href="assets/css/dashlite.css?ver=3.0.2">
+    <link id="skin-default" rel="stylesheet" href="assets/css/theme.css?ver=3.0.2">
+</head>
+
+<body class="nk-body bg-lighter npc-general has-sidebar ">
+    <div class="nk-app-root">
+        <!-- main @s -->
+        <div class="nk-main ">
+            <!-- 页面左侧菜单栏-->
+            <div th:replace="~{common/commons :: left}"></div>
+            <!--页面右侧主体-->
+            <div class="nk-wrap ">
+                <!-- 页面右侧顶部内容 -->
+                <div th:replace="~{common/commons :: top}"></div>
+                <!-- 页面右侧顶部内容end -->
+
+                <!-- 页面右侧主体内容 -->
+                <div class="nk-content ">
+                    <div class="container-fluid">
+                        <div class="nk-content-inner">
+                            <div class="nk-content-body">
+                                <div class="nk-block-head nk-block-head-sm">
+                                    <div class="nk-block-between g-3">
+                                        <div class="nk-block-head-content">
+                                            <h3 class="nk-block-title page-title">广东白云学院 / <strong class="text-primary small">教务系统 </strong></h3>
+                                            <div class="nk-block-des text-soft">
+                                                <ul class="list-inline">
+                                                    <li>学生ID : <span class="text-base">[[${session.studentId}]]</span></li>
+                                                    <li>登录时间 : <span class="text-base">[[${session.systemTime}]]</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="nk-block-head-content">
+                                            <a href="html/kyc-list-regular.html" class="btn btn-outline-light bg-white d-none d-sm-inline-flex"><em class="icon ni ni-arrow-left"></em><span>Back</span></a>
+                                            <a href="html/kyc-list-regular.html" class="btn btn-icon btn-outline-light bg-white d-inline-flex d-sm-none"><em class="icon ni ni-arrow-left"></em></a>
+                                        </div>
+                                    </div>
+                                </div><!-- .nk-block-head -->
+                                <div class="nk-block">
+                                    <div class="row gy-5">
+                                        <div class="col-lg-5">
+                                            <div class="nk-block-head">
+                                                <div class="nk-block-head-content">
+                                                    <h5 class="nk-block-title title">学校信息</h5>
+                                                    <p>学生所在院校、学院、班级等</p>
+                                                </div>
+                                            </div><!-- .nk-block-head -->
+                                            <div class="card card-bordered">
+                                                <ul class="data-list is-compact">
+                                                    <li class="data-item">
+                                                        <div class="data-col">
+                                                            <div class="data-label">院校代码</div>
+                                                            <div class="data-value">10822</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="data-item">
+                                                        <div class="data-col">
+                                                            <div class="data-label">创办时间</div>
+                                                            <div class="data-value">1989年</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="data-item">
+                                                        <div class="data-col">
+                                                            <div class="data-label">学校类型</div>
+                                                            <div class="data-value"><span class="badge badge-dim badge-sm bg-outline-success">全日制普通本科</span></div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="data-item">
+                                                        <div class="data-col">
+                                                            <div class="data-label">现任校长</div>
+                                                            <div class="data-value">黄大乾</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="data-item">
+                                                        <div class="data-col">
+                                                            <div class="data-label">学校官网</div>
+                                                            <div class="data-value"><a href="http://www.baiyunU.edu.cn">http://www.baiyunU.edu.cn</a></div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div><!-- .card -->
+                                            <div class="nk-block-head">
+                                                <div class="nk-block-head-content">
+                                                    <h5 class="nk-block-title title">学院信息</h5>
+                                                    <p>所在二级学院详细信息</p>
+                                                </div>
+                                            </div><!-- .nk-block-head -->
+                                            <div class="card card-bordered">
+                                                <ul class="data-list is-compact">
+                                                    <li class="data-item">
+                                                        <div class="data-col">
+                                                            <div class="data-label">学院</div>
+                                                            <div class="data-value">[[${session.studentSchool}]]</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="data-item">
+                                                        <div class="data-col">
+                                                            <div class="data-label">专业</div>
+                                                            <div class="data-value">[[${session.studentMajor}]]</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="data-item">
+                                                        <div class="data-col">
+                                                            <div class="data-label">入学时间</div>
+                                                            <div class="data-value">[[${session.studentAdmissionDate}]]</div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div><!-- .card -->
+                                        </div><!-- .col -->
+                                        <div class="col-lg-7">
+                                            <div class="nk-block-head">
+                                                <div class="nk-block-head-content">
+                                                    <h5 class="nk-block-title title">学籍信息</h5>
+                                                    <p>学生在学校注册的个人信息</p>
+                                                </div>
+                                            </div>
+                                            <div class="card card-bordered">
+                                                <ul class="data-list is-compact">
+                                                    <li class="data-item">
+                                                        <div class="data-col">
+                                                            <div class="data-label">学号</div>
+                                                            <div class="data-value">[[${session.studentId}]]</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="data-item">
+                                                        <div class="data-col">
+                                                            <div class="data-label">姓名</div>
+                                                            <div class="data-value">[[${session.studentName}]]</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="data-item">
+                                                        <div class="data-col">
+                                                            <div class="data-label">性别</div>
+                                                            <div class="data-value">[[${session.studentGender}]]</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="data-item">
+                                                        <div class="data-col">
+                                                            <div class="data-label">民族</div>
+                                                            <div class="data-value text-soft"><em>[[${session.studentNationality}]]</em></div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="data-item">
+                                                        <div class="data-col">
+                                                            <div class="data-label">政治面貌</div>
+                                                            <div class="data-value">[[${session.studentPoliticsStatus}]]</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="data-item">
+                                                        <div class="data-col">
+                                                            <div class="data-label">生日</div>
+                                                            <div class="data-value">[[${session.studentBirthday}]]</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="data-item">
+                                                        <div class="data-col">
+                                                            <div class="data-label">电话</div>
+                                                            <div class="data-value">[[${session.studentPoliticsStatus}]]</div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="data-item">
+                                                        <div class="data-col">
+                                                            <div class="data-label">邮箱</div>
+                                                            <div class="data-value">123456@qq.com</div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div><!-- .col -->
+                                    </div><!-- .row -->
+                                </div><!-- .nk-block -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 页面右侧主体内容end -->
+
+                <!-- 页面右侧底部内容 -->
+                <div class="nk-footer">
+                    <div class="container-fluid">
+                        <div class="nk-footer-wrap">
+                            <div class="nk-footer-copyright"> &copy; 2022 DashLite. Template by <a href="https://softnio.com" target="_blank">Softnio</a>
+                            </div>
+                            <div class="nk-footer-links">
+                                <ul class="nav nav-sm">
+                                    <li class="nav-item dropup">
+                                        <a href="#" class="dropdown-toggle dropdown-indicator has-indicator nav-link text-base" data-bs-toggle="dropdown" data-offset="0,10"><span>English</span></a>
+                                        <div class="dropdown-menu dropdown-menu-sm dropdown-menu-end">
+                                            <ul class="language-list">
+                                                <li>
+                                                    <a href="#" class="language-item">
+                                                        <span class="language-name">English</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="language-item">
+                                                        <span class="language-name">Español</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="language-item">
+                                                        <span class="language-name">Français</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="language-item">
+                                                        <span class="language-name">Türkçe</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a data-bs-toggle="modal" href="#region" class="nav-link"><em class="icon ni ni-globe"></em><span class="ms-1">Select Region</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 页面右侧底部内容end -->
+            </div>
+            <!--页面右侧主体end-->
+        </div>
+        <!-- main @e -->
+    </div>
+    <!-- 选择国家-->
+    <div class="modal fade" tabindex="-1" role="dialog" id="region">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <a href="#" class="close" data-bs-dismiss="modal"><em class="icon ni ni-cross-sm"></em></a>
+                <div class="modal-body modal-body-md">
+                    <h5 class="title mb-4">Select Your Country</h5>
+                    <div class="nk-country-region">
+                        <ul class="country-list text-center gy-2">
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/arg.png" alt="" class="country-flag">
+                                    <span class="country-name">Argentina</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/aus.png" alt="" class="country-flag">
+                                    <span class="country-name">Australia</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/bangladesh.png" alt="" class="country-flag">
+                                    <span class="country-name">Bangladesh</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/canada.png" alt="" class="country-flag">
+                                    <span class="country-name">Canada <small>(English)</small></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/china.png" alt="" class="country-flag">
+                                    <span class="country-name">Centrafricaine</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/china.png" alt="" class="country-flag">
+                                    <span class="country-name">China</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/french.png" alt="" class="country-flag">
+                                    <span class="country-name">France</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/germany.png" alt="" class="country-flag">
+                                    <span class="country-name">Germany</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/iran.png" alt="" class="country-flag">
+                                    <span class="country-name">Iran</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/italy.png" alt="" class="country-flag">
+                                    <span class="country-name">Italy</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/mexico.png" alt="" class="country-flag">
+                                    <span class="country-name">México</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/philipine.png" alt="" class="country-flag">
+                                    <span class="country-name">Philippines</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/portugal.png" alt="" class="country-flag">
+                                    <span class="country-name">Portugal</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/s-africa.png" alt="" class="country-flag">
+                                    <span class="country-name">South Africa</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/spanish.png" alt="" class="country-flag">
+                                    <span class="country-name">Spain</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/switzerland.png" alt="" class="country-flag">
+                                    <span class="country-name">Switzerland</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/uk.png" alt="" class="country-flag">
+                                    <span class="country-name">United Kingdom</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="country-item">
+                                    <img src="./images/flags/english.png" alt="" class="country-flag">
+                                    <span class="country-name">United State</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- .modal-content -->
+        </div><!-- .modla-dialog -->
+    </div><!-- .modal -->
+    <!-- JavaScript -->
+    <script src="assets/js/bundle.js?ver=3.0.2"></script>
+    <script src="assets/js/scripts.js?ver=3.0.2"></script>
+    <script src="assets/js/charts/gd-default.js?ver=3.0.2"></script>
+</body>
+
+</html>
